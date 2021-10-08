@@ -23,7 +23,9 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func registerNewAccount(_ sender: Any) {
+        guard let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "SignUpViewController") else {return}
         
+        self.navigationController?.pushViewController(nextVC, animated: true)
     }
     
     @IBAction func goToSuccessPage(_ sender: Any) {

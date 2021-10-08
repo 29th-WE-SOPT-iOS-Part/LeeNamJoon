@@ -27,7 +27,11 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func goToCompletePage(_ sender: Any) {
+        guard let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "CompleteViewController") as? CompleteViewController else {return}
         
+        nextVC.username = self.username.text
+        nextVC.modalPresentationStyle = .fullScreen
+        self.present(nextVC, animated: true, completion: nil)
     }
     
 }
