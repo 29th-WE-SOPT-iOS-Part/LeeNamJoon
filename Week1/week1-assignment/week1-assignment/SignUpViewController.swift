@@ -12,14 +12,25 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var username: UITextField!
     @IBOutlet weak var emailOrPhone: UITextField!
     @IBOutlet weak var password: UITextField!
+    @IBOutlet weak var nextButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        nextButton.isEnabled = false
+        password.delegate = self
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
+    }
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        if textField.text!.count > 1 {
+            self.nextButton.isEnabled = true
+        } else {
+            self.nextButton.isEnabled = false
+        }
+        return true
     }
     
     @IBAction func showPassword(_ sender: Any) {
