@@ -23,7 +23,11 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func showPassword(_ sender: Any) {
-        
+        if self.password.isSecureTextEntry {
+            self.password.isSecureTextEntry = false
+        } else {
+            self.password.isSecureTextEntry = true
+        }
     }
     
     @IBAction func goToCompletePage(_ sender: Any) {
