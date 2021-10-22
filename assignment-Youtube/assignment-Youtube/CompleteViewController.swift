@@ -31,5 +31,8 @@ class CompleteViewController: UIViewController {
         self.present(nextVC, animated: true, completion: nil)
     }
     
+    @IBAction func goToAnotherAccount(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
     
 }
