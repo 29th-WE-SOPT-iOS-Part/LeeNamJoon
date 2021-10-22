@@ -25,7 +25,11 @@ class CompleteViewController: UIViewController {
     }
     
     @IBAction func confirm(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
+        guard let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "YoutubeTabBarController") as? YoutubeTabBarController else {return}
+        
+        nextVC.modalPresentationStyle = .fullScreen
+        self.present(nextVC, animated: true, completion: nil)
     }
+    
     
 }
