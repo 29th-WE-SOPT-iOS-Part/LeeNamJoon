@@ -16,12 +16,16 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        nextButton.isEnabled = false
-        password.delegate = self
+        initializeTextFieldAndButtonValue()
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
+    }
+    
+    func initializeTextFieldAndButtonValue() {
+        nextButton.isEnabled = false
+        password.delegate = self
     }
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
@@ -34,11 +38,9 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func showPassword(_ sender: Any) {
-        if self.password.isSecureTextEntry {
-            self.password.isSecureTextEntry = false
-        } else {
-            self.password.isSecureTextEntry = true
-        }
+        // toggle() 메소드는 bool값을 전환시킬 수 있음
+        // https://developer.apple.com/documentation/swift/bool/2994863-toggle
+        self.password.isSecureTextEntry.toggle()
     }
     
     @IBAction func goToCompletePage(_ sender: Any) {

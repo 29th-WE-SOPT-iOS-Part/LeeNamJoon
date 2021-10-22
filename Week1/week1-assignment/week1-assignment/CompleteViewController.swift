@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CompleteViewController: UIViewController, UITextFieldDelegate {
+class CompleteViewController: UIViewController {
 
     @IBOutlet weak var usernameLabel: UILabel!
     var username: String?
