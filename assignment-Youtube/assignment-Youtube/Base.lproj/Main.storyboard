@@ -11,7 +11,7 @@
         <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="LoginViewController" id="BYZ-38-t0r" customClass="LoginViewController" customModule="week1_assignment" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" id="BYZ-38-t0r" customClass="LoginViewController" customModule="assignment_Youtube" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -95,7 +95,7 @@
         <!--Sign Up View Controller-->
         <scene sceneID="rka-TN-ytM">
             <objects>
-                <viewController storyboardIdentifier="SignUpViewController" id="gic-az-sW6" customClass="SignUpViewController" customModule="week1_assignment" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SignUpViewController" id="gic-az-sW6" customClass="SignUpViewController" customModule="assignment_Youtube" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gfw-XA-yP7">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -171,7 +171,7 @@
         <!--Complete View Controller-->
         <scene sceneID="QGG-y4-aG1">
             <objects>
-                <viewController storyboardIdentifier="CompleteViewController" id="MrZ-rU-Ej1" customClass="CompleteViewController" customModule="week1_assignment" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CompleteViewController" id="MrZ-rU-Ej1" customClass="CompleteViewController" customModule="assignment_Youtube" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ypg-gm-Huw">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
