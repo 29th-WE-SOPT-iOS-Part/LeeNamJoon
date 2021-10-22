@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		14020A022722F1FD00AF0375 /* YoutubeTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14020A012722F1FD00AF0375 /* YoutubeTabBarController.swift */; };
+		14020A042722F21D00AF0375 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14020A032722F21D00AF0375 /* HomeVC.swift */; };
+		14020A062722F22800AF0375 /* ShortsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14020A052722F22800AF0375 /* ShortsVC.swift */; };
+		14020A082722F23500AF0375 /* PlusVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14020A072722F23500AF0375 /* PlusVC.swift */; };
+		14020A0A2722F24C00AF0375 /* SubscriptionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14020A092722F24C00AF0375 /* SubscriptionVC.swift */; };
+		14020A0C2722F25600AF0375 /* LibraryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14020A0B2722F25600AF0375 /* LibraryVC.swift */; };
 		1430B1602710A298005A0538 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1430B15F2710A298005A0538 /* LoginViewController.swift */; };
 		1430B1622710A2C5005A0538 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1430B1612710A2C5005A0538 /* SignUpViewController.swift */; };
 		1430B1642710A2D0005A0538 /* CompleteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1430B1632710A2D0005A0538 /* CompleteViewController.swift */; };
@@ -19,6 +25,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		14020A012722F1FD00AF0375 /* YoutubeTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoutubeTabBarController.swift; sourceTree = "<group>"; };
+		14020A032722F21D00AF0375 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		14020A052722F22800AF0375 /* ShortsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortsVC.swift; sourceTree = "<group>"; };
+		14020A072722F23500AF0375 /* PlusVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlusVC.swift; sourceTree = "<group>"; };
+		14020A092722F24C00AF0375 /* SubscriptionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionVC.swift; sourceTree = "<group>"; };
+		14020A0B2722F25600AF0375 /* LibraryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryVC.swift; sourceTree = "<group>"; };
 		1430B15F2710A298005A0538 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		1430B1612710A2C5005A0538 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		1430B1632710A2D0005A0538 /* CompleteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteViewController.swift; sourceTree = "<group>"; };
@@ -66,6 +78,12 @@
 				146C9E952710980D0065A609 /* SceneDelegate.swift */,
 				146C9E972710980D0065A609 /* ViewController.swift */,
 				146C9E992710980D0065A609 /* Main.storyboard */,
+				14020A012722F1FD00AF0375 /* YoutubeTabBarController.swift */,
+				14020A032722F21D00AF0375 /* HomeVC.swift */,
+				14020A052722F22800AF0375 /* ShortsVC.swift */,
+				14020A072722F23500AF0375 /* PlusVC.swift */,
+				14020A092722F24C00AF0375 /* SubscriptionVC.swift */,
+				14020A0B2722F25600AF0375 /* LibraryVC.swift */,
 				1430B1632710A2D0005A0538 /* CompleteViewController.swift */,
 				1430B1612710A2C5005A0538 /* SignUpViewController.swift */,
 				1430B15F2710A298005A0538 /* LoginViewController.swift */,
@@ -148,10 +166,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				1430B1602710A298005A0538 /* LoginViewController.swift in Sources */,
+				14020A042722F21D00AF0375 /* HomeVC.swift in Sources */,
+				14020A022722F1FD00AF0375 /* YoutubeTabBarController.swift in Sources */,
 				146C9E982710980D0065A609 /* ViewController.swift in Sources */,
+				14020A0A2722F24C00AF0375 /* SubscriptionVC.swift in Sources */,
 				146C9E942710980D0065A609 /* AppDelegate.swift in Sources */,
 				146C9E962710980D0065A609 /* SceneDelegate.swift in Sources */,
+				14020A082722F23500AF0375 /* PlusVC.swift in Sources */,
+				14020A0C2722F25600AF0375 /* LibraryVC.swift in Sources */,
 				1430B1622710A2C5005A0538 /* SignUpViewController.swift in Sources */,
+				14020A062722F22800AF0375 /* ShortsVC.swift in Sources */,
 				1430B1642710A2D0005A0538 /* CompleteViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
