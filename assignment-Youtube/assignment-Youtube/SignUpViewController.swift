@@ -19,6 +19,12 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
         initializeTextFieldAndButtonValue()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        self.username.text = ""
+        self.emailOrPhone.text = ""
+        self.password.text = ""
+    }
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }
