@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6PI-Cu-jNX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3W5-lA-v4D">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
@@ -449,16 +449,27 @@
                                     <constraint firstAttribute="bottom" secondItem="4pP-89-d5z" secondAttribute="bottom" constant="13" id="zGl-aG-Yye"/>
                                 </constraints>
                             </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="y2H-e9-LBf">
+                                <rect key="frame" x="0.0" y="88" width="375" height="690"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="hCU-d0-M95"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="hCU-d0-M95" firstAttribute="bottom" secondItem="y2H-e9-LBf" secondAttribute="bottom" id="A66-eY-rTB"/>
                             <constraint firstItem="6cT-6l-7kx" firstAttribute="top" secondItem="hCU-d0-M95" secondAttribute="top" id="HDY-2E-IFn"/>
                             <constraint firstItem="6cT-6l-7kx" firstAttribute="leading" secondItem="hCU-d0-M95" secondAttribute="leading" id="J0U-8F-ITk"/>
                             <constraint firstItem="hCU-d0-M95" firstAttribute="trailing" secondItem="6cT-6l-7kx" secondAttribute="trailing" id="LpE-IW-TA8"/>
+                            <constraint firstItem="y2H-e9-LBf" firstAttribute="leading" secondItem="hCU-d0-M95" secondAttribute="leading" id="OhG-cq-DQ7"/>
+                            <constraint firstItem="y2H-e9-LBf" firstAttribute="top" secondItem="6cT-6l-7kx" secondAttribute="bottom" id="Z9O-Tb-q9N"/>
+                            <constraint firstItem="hCU-d0-M95" firstAttribute="trailing" secondItem="y2H-e9-LBf" secondAttribute="trailing" id="axw-Cb-QIf"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 1" id="AQy-1T-ah0"/>
+                    <connections>
+                        <outlet property="homeVideoTableView" destination="y2H-e9-LBf" id="tnX-fo-8aL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HUA-bI-Hjg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
