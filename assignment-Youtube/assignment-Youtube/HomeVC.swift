@@ -28,12 +28,12 @@ class HomeVC: UIViewController {
     
     func initHomeShortsVideoList() {
         homeShortsVideoList.append(contentsOf: [
-            HomeShortsVideo(videoOwnerImageName: "iOSPart", videoOwnerName: "ggamju1"),
-            HomeShortsVideo(videoOwnerImageName: "AndroidPart", videoOwnerName: "ggamju2"),
-            HomeShortsVideo(videoOwnerImageName: "ServerPart", videoOwnerName: "ggamju3"),
-            HomeShortsVideo(videoOwnerImageName: "WebPart", videoOwnerName: "ggamju4"),
-            HomeShortsVideo(videoOwnerImageName: "DesignPart", videoOwnerName: "ggamju5"),
-            HomeShortsVideo(videoOwnerImageName: "PlanPart", videoOwnerName: "ggamju6")
+            HomeShortsVideo(videoOwnerImageName: "ggamju1", videoOwnerName: "iOSPart"),
+            HomeShortsVideo(videoOwnerImageName: "ggamju2", videoOwnerName: "AndroidPart"),
+            HomeShortsVideo(videoOwnerImageName: "ggamju3", videoOwnerName: "ServerPart"),
+            HomeShortsVideo(videoOwnerImageName: "ggamju4", videoOwnerName: "WebPart"),
+            HomeShortsVideo(videoOwnerImageName: "ggamju5", videoOwnerName: "DesignPart"),
+            HomeShortsVideo(videoOwnerImageName: "ggamju6", videoOwnerName: "PlanPart")
         ])
     }
     
