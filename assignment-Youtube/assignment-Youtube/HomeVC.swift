@@ -10,14 +10,31 @@ import UIKit
 class HomeVC: UIViewController {
 
     @IBOutlet weak var homeVideoTableView: UITableView!
+    @IBOutlet weak var homeShortsCollectionView: UICollectionView!
     
     var homeVideoList: [HomeVideo] = []
+    var homeShortsVideoList: [HomeShortsVideo] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         initHomeVideoList()
+        initHomeShortsVideoList()
+        registerXib()
         homeVideoTableView.dataSource = self
         homeVideoTableView.delegate = self
+        homeShortsCollectionView.dataSource = self
+        homeShortsCollectionView.delegate = self
+    }
+    
+    func initHomeShortsVideoList() {
+        homeShortsVideoList.append(contentsOf: [
+            HomeShortsVideo(videoOwnerImageName: "iOSPart", videoOwnerName: "ggamju1"),
+            HomeShortsVideo(videoOwnerImageName: "AndroidPart", videoOwnerName: "ggamju2"),
+            HomeShortsVideo(videoOwnerImageName: "ServerPart", videoOwnerName: "ggamju3"),
+            HomeShortsVideo(videoOwnerImageName: "WebPart", videoOwnerName: "ggamju4"),
+            HomeShortsVideo(videoOwnerImageName: "DesignPart", videoOwnerName: "ggamju5"),
+            HomeShortsVideo(videoOwnerImageName: "PlanPart", videoOwnerName: "ggamju6")
+        ])
     }
     
     func initHomeVideoList() {
@@ -29,7 +46,11 @@ class HomeVC: UIViewController {
             HomeVideo(videoThumbnailName: "wesoptiOSPart", videoOwnerImageName: "wesoptProfile", videoName: "7차 iOS 세미나 : Animation과 제스쳐, 데이터 전달 심화", videoDescription: "WE SOPT ・조회수 100만회 ・ 3주 전")
         ])
     }
-
+    
+    func registerXib() {
+        let xibName = UINib(nibName: HomeTableViewCell.identifier, bundle: nil)
+        homeVideoTableView.register(xibName, forCellReuseIdentifier: HomeTableViewCell.identifier)
+    }
 }
 
 extension HomeVC: UITableViewDelegate {
@@ -52,4 +73,36 @@ extension HomeVC: UITableViewDataSource {
     }
     
     
+}
+
+extension HomeVC: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return homeShortsVideoList.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeCollectionViewCell.identifier, for: indexPath)
+                as? HomeCollectionViewCell else {return UICollectionViewCell()}
+        
+        cell.setData(iconImage: homeShortsVideoList[indexPath.row].makeVideoOwnerImage(), nameLabel: homeShortsVideoList[indexPath.row].videoOwnerName)
+        return cell
+    }
+}
+
+extension HomeVC: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: 72, height: 104)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets.zero
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 0
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 0
+    }
 }

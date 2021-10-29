@@ -5,6 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -450,24 +451,77 @@
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="y2H-e9-LBf">
-                                <rect key="frame" x="0.0" y="88" width="375" height="690"/>
+                                <rect key="frame" x="0.0" y="192" width="375" height="586"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="DWF-0O-Hed" userLabel="Home Shorts Collection View">
+                                <rect key="frame" x="0.0" y="88" width="375" height="104"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="104" id="v8z-jq-iMg"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Vxx-cc-a7S">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HomeCollectionViewCell" id="HOS-g4-sH2" userLabel="Home Shorts Collection View Cell" customClass="HomeCollectionViewCell" customModule="assignment_Youtube" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="72" height="104"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Rmj-AW-nGn">
+                                            <rect key="frame" x="0.0" y="0.0" width="72" height="104"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Hvt-S7-yMu">
+                                                    <rect key="frame" x="7" y="14" width="58" height="58"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="Hvt-S7-yMu" secondAttribute="height" multiplier="1:1" id="HbF-hm-VAX"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6JL-4P-Lqq">
+                                                    <rect key="frame" x="20.666666666666671" y="77" width="31" height="14.333333333333329"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="6JL-4P-Lqq" firstAttribute="top" secondItem="Hvt-S7-yMu" secondAttribute="bottom" constant="5" id="8Ui-ct-8qm"/>
+                                                <constraint firstAttribute="trailing" secondItem="Hvt-S7-yMu" secondAttribute="trailing" constant="7" id="8kT-RM-geU"/>
+                                                <constraint firstItem="Hvt-S7-yMu" firstAttribute="leading" secondItem="Rmj-AW-nGn" secondAttribute="leading" constant="7" id="CqS-70-I76"/>
+                                                <constraint firstItem="6JL-4P-Lqq" firstAttribute="centerX" secondItem="Hvt-S7-yMu" secondAttribute="centerX" id="ldi-eo-Zta"/>
+                                                <constraint firstItem="Hvt-S7-yMu" firstAttribute="top" secondItem="Rmj-AW-nGn" secondAttribute="top" constant="14" id="pPD-Kr-mj9"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="72" height="104"/>
+                                        <connections>
+                                            <outlet property="homeShortsIconImageView" destination="Hvt-S7-yMu" id="dWb-0u-xiv"/>
+                                            <outlet property="homeShortsNameLabel" destination="6JL-4P-Lqq" id="DnU-Xf-5M9"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="hCU-d0-M95"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="y2H-e9-LBf" firstAttribute="top" secondItem="DWF-0O-Hed" secondAttribute="bottom" id="0rE-mT-6qQ"/>
                             <constraint firstItem="hCU-d0-M95" firstAttribute="bottom" secondItem="y2H-e9-LBf" secondAttribute="bottom" id="A66-eY-rTB"/>
+                            <constraint firstItem="hCU-d0-M95" firstAttribute="trailing" secondItem="DWF-0O-Hed" secondAttribute="trailing" id="H5Y-4a-6uy"/>
                             <constraint firstItem="6cT-6l-7kx" firstAttribute="top" secondItem="hCU-d0-M95" secondAttribute="top" id="HDY-2E-IFn"/>
                             <constraint firstItem="6cT-6l-7kx" firstAttribute="leading" secondItem="hCU-d0-M95" secondAttribute="leading" id="J0U-8F-ITk"/>
                             <constraint firstItem="hCU-d0-M95" firstAttribute="trailing" secondItem="6cT-6l-7kx" secondAttribute="trailing" id="LpE-IW-TA8"/>
                             <constraint firstItem="y2H-e9-LBf" firstAttribute="leading" secondItem="hCU-d0-M95" secondAttribute="leading" id="OhG-cq-DQ7"/>
-                            <constraint firstItem="y2H-e9-LBf" firstAttribute="top" secondItem="6cT-6l-7kx" secondAttribute="bottom" id="Z9O-Tb-q9N"/>
+                            <constraint firstItem="DWF-0O-Hed" firstAttribute="top" secondItem="6cT-6l-7kx" secondAttribute="bottom" id="Yyi-ir-MlW"/>
                             <constraint firstItem="hCU-d0-M95" firstAttribute="trailing" secondItem="y2H-e9-LBf" secondAttribute="trailing" id="axw-Cb-QIf"/>
+                            <constraint firstItem="DWF-0O-Hed" firstAttribute="leading" secondItem="hCU-d0-M95" secondAttribute="leading" id="n6O-Kh-ZDt"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 1" id="AQy-1T-ah0"/>
                     <connections>
+                        <outlet property="homeShortsCollectionView" destination="DWF-0O-Hed" id="1Dy-QE-pKg"/>
                         <outlet property="homeVideoTableView" destination="y2H-e9-LBf" id="tnX-fo-8aL"/>
                     </connections>
                 </viewController>
