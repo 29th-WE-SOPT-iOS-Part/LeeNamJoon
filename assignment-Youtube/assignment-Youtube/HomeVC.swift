@@ -8,7 +8,8 @@
 import UIKit
 
 class HomeVC: UIViewController {
-
+    @IBOutlet weak var accountButton: UIButton!
+    
     @IBOutlet weak var homeVideoTableView: UITableView!
     @IBOutlet weak var homeShortsCollectionView: UICollectionView!
     
@@ -17,6 +18,7 @@ class HomeVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         initHomeVideoList()
         initHomeShortsVideoList()
         registerXib()
@@ -59,6 +61,14 @@ class HomeVC: UIViewController {
         homeShortsCollectionView.dataSource = self
         homeShortsCollectionView.delegate = self
     }
+    
+    @IBAction func goToLoginOrAccountInfo(_ sender: Any) {
+        guard let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "LoginViewController") as? LoginViewController else {return}
+        
+        nextVC.modalPresentationStyle = .fullScreen
+        self.present(nextVC, animated: true, completion: nil)
+    }
+    
 }
 
 extension HomeVC: UITableViewDelegate {

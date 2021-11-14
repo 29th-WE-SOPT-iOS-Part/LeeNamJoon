@@ -401,6 +401,9 @@
                                         </constraints>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="wesoptProfile"/>
+                                        <connections>
+                                            <action selector="goToLoginOrAccountInfo:" destination="hZ3-4t-ho1" eventType="touchUpInside" id="d6I-u2-tnX"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H2s-tN-Evw" userLabel="SearchButton">
                                         <rect key="frame" x="286" y="5" width="32" height="32"/>
@@ -521,6 +524,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 1" id="AQy-1T-ah0"/>
                     <connections>
+                        <outlet property="accountButton" destination="g5Z-mK-44W" id="hwL-Zb-CGg"/>
                         <outlet property="homeShortsCollectionView" destination="DWF-0O-Hed" id="1Dy-QE-pKg"/>
                         <outlet property="homeVideoTableView" destination="y2H-e9-LBf" id="tnX-fo-8aL"/>
                     </connections>
