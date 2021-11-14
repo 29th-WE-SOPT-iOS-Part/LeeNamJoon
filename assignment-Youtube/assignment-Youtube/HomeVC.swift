@@ -12,18 +12,16 @@ class HomeVC: UIViewController {
     @IBOutlet weak var homeVideoTableView: UITableView!
     @IBOutlet weak var homeShortsCollectionView: UICollectionView!
     
-    var homeVideoList: [HomeVideo] = []
-    var homeShortsVideoList: [HomeShortsVideo] = []
+    private var homeVideoList: [HomeVideo] = []
+    private var homeShortsVideoList: [HomeShortsVideo] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         initHomeVideoList()
         initHomeShortsVideoList()
         registerXib()
-        homeVideoTableView.dataSource = self
-        homeVideoTableView.delegate = self
-        homeShortsCollectionView.dataSource = self
-        homeShortsCollectionView.delegate = self
+        setHomeVideoTableView()
+        setHomeShortsCollectionView()
     }
     
     func initHomeShortsVideoList() {
@@ -50,6 +48,16 @@ class HomeVC: UIViewController {
     func registerXib() {
         let xibName = UINib(nibName: HomeTableViewCell.identifier, bundle: nil)
         homeVideoTableView.register(xibName, forCellReuseIdentifier: HomeTableViewCell.identifier)
+    }
+    
+    func setHomeVideoTableView() {
+        homeVideoTableView.dataSource = self
+        homeVideoTableView.delegate = self
+    }
+    
+    func setHomeShortsCollectionView() {
+        homeShortsCollectionView.dataSource = self
+        homeShortsCollectionView.delegate = self
     }
 }
 
