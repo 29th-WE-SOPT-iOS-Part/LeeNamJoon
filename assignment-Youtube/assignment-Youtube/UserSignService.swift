@@ -51,8 +51,7 @@ struct UserSignService {
     
     private func isValidLoginData(data: Data) -> NetworkResult<Any> {
         let decoder = JSONDecoder()
-        guard let decodeData = try? decoder.decode(LoginResponseData.self, from: data)
-        else {return .pathErr}
+        guard let decodeData = try? decoder.decode(LoginResponseData.self, from: data) else {return .pathErr}
         return .success(decodeData)
     }
 }

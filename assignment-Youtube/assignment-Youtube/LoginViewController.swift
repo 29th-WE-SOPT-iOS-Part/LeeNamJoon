@@ -46,11 +46,41 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func goToSuccessPage(_ sender: Any) {
-        guard let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "CompleteViewController") as? CompleteViewController else {return}
-        
-        nextVC.username = self.username.text
-        nextVC.modalPresentationStyle = .fullScreen
-        self.present(nextVC, animated: true, completion: nil)
+        requestLogin()
     }
     
+    func simpleAlert(title: String, message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "확인", style: .default) { (_) in
+            guard let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "CompleteViewController") as? CompleteViewController else {return}
+
+            nextVC.username = self.username.text
+            nextVC.modalPresentationStyle = .fullScreen
+            self.present(nextVC, animated: true, completion: nil)
+        }
+        alert.addAction(okAction)
+        present(alert, animated: true)
+    }
+}
+
+extension LoginViewController {
+    func requestLogin() {
+        UserSignService.shared.login(email: emailOrPhone.text ?? "", password: password.text ?? "") { responseData in
+            switch responseData {
+            case .success(let loginResponse):
+                guard let response = loginResponse as? LoginResponseData else {return}
+                if let userData = response.data {
+                    self.simpleAlert(title: "로그인", message: response.message)
+                }
+            case .requestErr(let msg):
+                print("requestERR \(msg)")
+            case .pathErr:
+                print("pathErr")
+            case .serverErr:
+                print("serverErr")
+            case .networkFail:
+                print("networkFail")
+            }
+        }
+    }
 }
