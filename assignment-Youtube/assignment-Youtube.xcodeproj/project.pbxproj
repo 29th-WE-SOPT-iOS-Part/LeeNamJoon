@@ -78,6 +78,89 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1423AA9D2771D61A00B96C9C /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				1423AAA62771D6EB00B96C9C /* Model */,
+				1423AAA02771D64900B96C9C /* Network */,
+				1423AA9F2771D63500B96C9C /* Screen */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		1423AA9F2771D63500B96C9C /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				1423AAA52771D6B300B96C9C /* Storyboard */,
+				1423AAA42771D69800B96C9C /* VC */,
+				1423AAA22771D68000B96C9C /* Component */,
+				1423AAA12771D67A00B96C9C /* Cell */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		1423AAA02771D64900B96C9C /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				14EFE90727413ECF00864A81 /* APIConstants.swift */,
+				14EFE90A2741419900864A81 /* NetworkResult.swift */,
+				14EFE90B2741419900864A81 /* LoginResponseDataModel.swift */,
+				14EFE9092741419900864A81 /* UserSignService.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		1423AAA12771D67A00B96C9C /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				14CBA15B272C3EA600917518 /* HomeCollectionViewCell.swift */,
+				14CBA155272C2DF800917518 /* HomeTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		1423AAA22771D68000B96C9C /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				14CBA156272C2DF800917518 /* HomeTableViewCell.xib */,
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
+		1423AAA42771D69800B96C9C /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				14020A032722F21D00AF0375 /* HomeVC.swift */,
+				14020A052722F22800AF0375 /* ShortsVC.swift */,
+				14020A072722F23500AF0375 /* PlusVC.swift */,
+				14020A092722F24C00AF0375 /* SubscriptionVC.swift */,
+				14020A0B2722F25600AF0375 /* LibraryVC.swift */,
+				1430B1632710A2D0005A0538 /* CompleteViewController.swift */,
+				1430B1612710A2C5005A0538 /* SignUpViewController.swift */,
+				1430B15F2710A298005A0538 /* LoginViewController.swift */,
+				146C9E972710980D0065A609 /* ViewController.swift */,
+				14020A012722F1FD00AF0375 /* YoutubeTabBarController.swift */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		1423AAA52771D6B300B96C9C /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				146C9E992710980D0065A609 /* Main.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		1423AAA62771D6EB00B96C9C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				14CBA15D272C404300917518 /* HomeShortsVideoModel.swift */,
+				14CBA159272C30D500917518 /* HomeVideoModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		146C9E872710980D0065A609 = {
 			isa = PBXGroup;
 			children = (
@@ -99,31 +182,12 @@
 		146C9E922710980D0065A609 /* assignment-Youtube */ = {
 			isa = PBXGroup;
 			children = (
-				14EFE90A2741419900864A81 /* NetworkResult.swift */,
-				14EFE90B2741419900864A81 /* LoginResponseDataModel.swift */,
-				14EFE9092741419900864A81 /* UserSignService.swift */,
+				1423AA9D2771D61A00B96C9C /* Source */,
 				146C9E932710980D0065A609 /* AppDelegate.swift */,
 				146C9E952710980D0065A609 /* SceneDelegate.swift */,
-				146C9E972710980D0065A609 /* ViewController.swift */,
-				146C9E992710980D0065A609 /* Main.storyboard */,
-				14CBA15B272C3EA600917518 /* HomeCollectionViewCell.swift */,
-				14CBA15D272C404300917518 /* HomeShortsVideoModel.swift */,
-				14CBA155272C2DF800917518 /* HomeTableViewCell.swift */,
-				14CBA159272C30D500917518 /* HomeVideoModel.swift */,
-				14CBA156272C2DF800917518 /* HomeTableViewCell.xib */,
-				14020A012722F1FD00AF0375 /* YoutubeTabBarController.swift */,
-				14020A032722F21D00AF0375 /* HomeVC.swift */,
-				14020A052722F22800AF0375 /* ShortsVC.swift */,
-				14020A072722F23500AF0375 /* PlusVC.swift */,
-				14020A092722F24C00AF0375 /* SubscriptionVC.swift */,
-				14020A0B2722F25600AF0375 /* LibraryVC.swift */,
-				1430B1632710A2D0005A0538 /* CompleteViewController.swift */,
-				1430B1612710A2C5005A0538 /* SignUpViewController.swift */,
-				1430B15F2710A298005A0538 /* LoginViewController.swift */,
 				146C9E9C271098100065A609 /* Assets.xcassets */,
 				146C9E9E271098100065A609 /* LaunchScreen.storyboard */,
 				146C9EA1271098100065A609 /* Info.plist */,
-				14EFE90727413ECF00864A81 /* APIConstants.swift */,
 			);
 			path = "assignment-Youtube";
 			sourceTree = "<group>";
