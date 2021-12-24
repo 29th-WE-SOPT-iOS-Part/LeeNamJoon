@@ -43,7 +43,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBAction func registerNewAccount(_ sender: Any) {
         guard let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "SignUpViewController") else {return}
         print(nextVC)
-        self.navigationController?.pushViewController(nextVC, animated: true) // 하 이거 왜 안되는거야 빡치게
+//        self.navigationController?.pushViewController(nextVC, animated: true) // 하 이거 왜 안되는거야 빡치게
+        self.present(nextVC, animated: true, completion: nil)
     }
     
     @IBAction func goToSuccessPage(_ sender: Any) {
