@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class LoginViewController: UIViewController, UITextFieldDelegate {
 
@@ -41,39 +42,41 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func registerNewAccount(_ sender: Any) {
         guard let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "SignUpViewController") else {return}
-        
-        self.navigationController?.pushViewController(nextVC, animated: true)
+        print(nextVC)
+        self.navigationController?.pushViewController(nextVC, animated: true) // 하 이거 왜 안되는거야 빡치게
     }
     
     @IBAction func goToSuccessPage(_ sender: Any) {
         requestLogin()
     }
     
-    func simpleAlert(title: String, message: String) {
-        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "확인", style: .default) { (_) in
-            guard let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "CompleteViewController") as? CompleteViewController else {return}
-
-            nextVC.username = self.username.text
-            nextVC.modalPresentationStyle = .fullScreen
-            self.present(nextVC, animated: true, completion: nil)
-        }
+    func simpleAlert(message: String, completion: ((UIAlertAction) -> Void)?) {
+        let alert = UIAlertController(title: "로그인", message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "확인", style: .default, handler: completion)
         alert.addAction(okAction)
-        present(alert, animated: true)
+        self.present(alert, animated: true, completion: nil)
     }
 }
 
 extension LoginViewController {
     func requestLogin() {
-        UserSignService.shared.login(email: emailOrPhone.text ?? "", password: password.text ?? "") { responseData in
+        UserLoginService.shared.login(email: emailOrPhone.text ?? "",
+                                      password: password.text ?? "") { responseData in
+            
             switch responseData {
             case .success(let loginResponse):
                 guard let response = loginResponse as? LoginResponseData else {return}
-                if let userData = response.data {
-                    self.simpleAlert(title: "로그인", message: response.message)
+                self.simpleAlert(message: response.message) { _ in
+                    guard let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "CompleteViewController") as? CompleteViewController else { return }
+                    
+                    nextVC.username = self.username.text
+                    nextVC.modalPresentationStyle = .fullScreen
+                    self.present(nextVC, animated: true, completion: nil)
                 }
             case .requestErr(let msg):
                 print("requestERR \(msg)")
+                guard let message = msg as? String else {return}
+                self.simpleAlert(message: message, completion: nil)
             case .pathErr:
                 print("pathErr")
             case .serverErr:
