@@ -16,12 +16,27 @@ class HomeTableViewCell: UITableViewCell {
     @IBOutlet weak var homeVideoSpec: UILabel!
     @IBOutlet weak var homeVideoActButton: UIButton!
     
+    var showVideoDetail: (() -> ())?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
+//        homeVideoThumbnail.addGestureRecognizer(UIGestureRecognizer(target: self, action: #selector(imageTapped(_:))))
+        setGesture()
+    }
+    
+    func setGesture() {
+        let gesture = UITapGestureRecognizer(target: self, action: #selector(imageTapped))
+        homeVideoThumbnail.addGestureRecognizer(gesture)
+        homeVideoThumbnail.isUserInteractionEnabled = true
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
+    }
+    
+    @objc func imageTapped(_ sender: UITapGestureRecognizer) {
+        print("taptap")
+        showVideoDetail?()
     }
     
     func setData(appData: HomeVideo) {
