@@ -81,9 +81,10 @@
 		1423AA9D2771D61A00B96C9C /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				1423AAA62771D6EB00B96C9C /* Model */,
+				1423AAA82771DA7D00B96C9C /* Models */,
 				1423AAA02771D64900B96C9C /* Network */,
 				1423AA9F2771D63500B96C9C /* Screen */,
+				1423AAA72771DA3E00B96C9C /* Supports */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -103,8 +104,8 @@
 			isa = PBXGroup;
 			children = (
 				14EFE90727413ECF00864A81 /* APIConstants.swift */,
-				14EFE90A2741419900864A81 /* NetworkResult.swift */,
 				14EFE90B2741419900864A81 /* LoginResponseDataModel.swift */,
+				14EFE90A2741419900864A81 /* NetworkResult.swift */,
 				14EFE9092741419900864A81 /* UserSignService.swift */,
 			);
 			path = Network;
@@ -130,14 +131,14 @@
 		1423AAA42771D69800B96C9C /* VC */ = {
 			isa = PBXGroup;
 			children = (
-				14020A032722F21D00AF0375 /* HomeVC.swift */,
-				14020A052722F22800AF0375 /* ShortsVC.swift */,
-				14020A072722F23500AF0375 /* PlusVC.swift */,
-				14020A092722F24C00AF0375 /* SubscriptionVC.swift */,
-				14020A0B2722F25600AF0375 /* LibraryVC.swift */,
 				1430B1632710A2D0005A0538 /* CompleteViewController.swift */,
-				1430B1612710A2C5005A0538 /* SignUpViewController.swift */,
+				14020A032722F21D00AF0375 /* HomeVC.swift */,
+				14020A0B2722F25600AF0375 /* LibraryVC.swift */,
 				1430B15F2710A298005A0538 /* LoginViewController.swift */,
+				14020A072722F23500AF0375 /* PlusVC.swift */,
+				14020A052722F22800AF0375 /* ShortsVC.swift */,
+				1430B1612710A2C5005A0538 /* SignUpViewController.swift */,
+				14020A092722F24C00AF0375 /* SubscriptionVC.swift */,
 				146C9E972710980D0065A609 /* ViewController.swift */,
 				14020A012722F1FD00AF0375 /* YoutubeTabBarController.swift */,
 			);
@@ -152,13 +153,32 @@
 			path = Storyboard;
 			sourceTree = "<group>";
 		};
-		1423AAA62771D6EB00B96C9C /* Model */ = {
+		1423AAA72771DA3E00B96C9C /* Supports */ = {
+			isa = PBXGroup;
+			children = (
+				146C9E932710980D0065A609 /* AppDelegate.swift */,
+				146C9E952710980D0065A609 /* SceneDelegate.swift */,
+			);
+			path = Supports;
+			sourceTree = "<group>";
+		};
+		1423AAA82771DA7D00B96C9C /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				14CBA15D272C404300917518 /* HomeShortsVideoModel.swift */,
 				14CBA159272C30D500917518 /* HomeVideoModel.swift */,
 			);
-			path = Model;
+			path = Models;
+			sourceTree = "<group>";
+		};
+		1423AAA92771DA9800B96C9C /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				146C9E9C271098100065A609 /* Assets.xcassets */,
+				146C9EA1271098100065A609 /* Info.plist */,
+				146C9E9E271098100065A609 /* LaunchScreen.storyboard */,
+			);
+			path = Resource;
 			sourceTree = "<group>";
 		};
 		146C9E872710980D0065A609 = {
@@ -183,11 +203,7 @@
 			isa = PBXGroup;
 			children = (
 				1423AA9D2771D61A00B96C9C /* Source */,
-				146C9E932710980D0065A609 /* AppDelegate.swift */,
-				146C9E952710980D0065A609 /* SceneDelegate.swift */,
-				146C9E9C271098100065A609 /* Assets.xcassets */,
-				146C9E9E271098100065A609 /* LaunchScreen.storyboard */,
-				146C9EA1271098100065A609 /* Info.plist */,
+				1423AAA92771DA9800B96C9C /* Resource */,
 			);
 			path = "assignment-Youtube";
 			sourceTree = "<group>";
