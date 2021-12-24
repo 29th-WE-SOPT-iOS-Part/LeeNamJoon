@@ -8,6 +8,7 @@
 import UIKit
 
 class HomeVC: UIViewController {
+    
     @IBOutlet weak var accountButton: UIButton!
     
     @IBOutlet weak var homeVideoTableView: UITableView!
@@ -69,6 +70,11 @@ class HomeVC: UIViewController {
         self.present(nextVC, animated: true, completion: nil)
     }
     
+    func showVideoDetail() {
+        guard let detailVC = self.storyboard?.instantiateViewController(withIdentifier: "HomeDetailVC") as? HomeDetailVC else {return}
+        
+        self.present(detailVC, animated: true, completion: nil)
+    }
 }
 
 extension HomeVC: UITableViewDelegate {
@@ -87,10 +93,18 @@ extension HomeVC: UITableViewDataSource {
                 HomeTableViewCell else {return UITableViewCell()}
         
         cell.setData(appData: homeVideoList[indexPath.row])
+        
+        cell.showVideoDetail = {
+            guard let detailVC = self.storyboard?.instantiateViewController(withIdentifier: "HomeDetailVC") as? HomeDetailVC else {return}
+            
+            detailVC.detailInfo = self.homeVideoList[indexPath.row]
+            
+            detailVC.modalPresentationStyle = .fullScreen
+            self.present(detailVC, animated: true, completion: nil)
+        }
+        
         return cell
     }
-    
-    
 }
 
 extension HomeVC: UICollectionViewDataSource {
@@ -103,6 +117,7 @@ extension HomeVC: UICollectionViewDataSource {
                 as? HomeCollectionViewCell else {return UICollectionViewCell()}
         
         cell.setData(iconImage: homeShortsVideoList[indexPath.row].makeVideoOwnerImage(), nameLabel: homeShortsVideoList[indexPath.row].videoOwnerName)
+        
         return cell
     }
 }

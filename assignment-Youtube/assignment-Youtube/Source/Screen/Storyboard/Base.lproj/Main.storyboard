@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hZ3-4t-ho1">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
@@ -564,6 +564,75 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oNX-e4-NnP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="28" y="55.418719211822662"/>
+        </scene>
+        <!--Home DetailVC-->
+        <scene sceneID="sMM-wZ-urp">
+            <objects>
+                <viewController storyboardIdentifier="HomeDetailVC" id="QDj-fx-Hel" customClass="HomeDetailVC" customModule="assignment_Youtube" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="w9O-8H-uMB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xIL-tQ-D09">
+                                <rect key="frame" x="0.0" y="44" width="375" height="212"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="212" id="rWg-nU-jwz"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="동영상 이름" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iQH-fP-ctv">
+                                <rect key="frame" x="12" y="268" width="69" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="동영상 설명" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qn4-9d-ceD">
+                                <rect key="frame" x="12" y="292" width="78" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y39-iI-GVl">
+                                <rect key="frame" x="15" y="59" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="NNg-1C-lDk"/>
+                                    <constraint firstAttribute="width" secondItem="Y39-iI-GVl" secondAttribute="height" multiplier="1:1" id="aEA-aI-4Ei"/>
+                                    <constraint firstAttribute="width" constant="50" id="svV-Ie-tB8"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="">
+                                    <backgroundConfiguration key="background">
+                                        <color key="backgroundColor" systemColor="linkColor"/>
+                                    </backgroundConfiguration>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="goToVideoList:" destination="QDj-fx-Hel" eventType="touchUpInside" id="HIL-Cg-WsR"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Fxf-eg-Rbz"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Fxf-eg-Rbz" firstAttribute="trailing" secondItem="xIL-tQ-D09" secondAttribute="trailing" id="3w8-Eg-gzN"/>
+                            <constraint firstItem="Y39-iI-GVl" firstAttribute="leading" secondItem="Fxf-eg-Rbz" secondAttribute="leading" constant="15" id="4Ri-r3-j42"/>
+                            <constraint firstItem="iQH-fP-ctv" firstAttribute="leading" secondItem="Fxf-eg-Rbz" secondAttribute="leading" constant="12" id="7kt-5E-g7F"/>
+                            <constraint firstItem="Qn4-9d-ceD" firstAttribute="top" secondItem="iQH-fP-ctv" secondAttribute="bottom" constant="5" id="AEd-ur-EKN"/>
+                            <constraint firstItem="xIL-tQ-D09" firstAttribute="top" secondItem="Fxf-eg-Rbz" secondAttribute="top" id="HKA-UV-7n8"/>
+                            <constraint firstItem="Y39-iI-GVl" firstAttribute="top" secondItem="Fxf-eg-Rbz" secondAttribute="top" constant="15" id="JiH-bk-9dX"/>
+                            <constraint firstItem="xIL-tQ-D09" firstAttribute="leading" secondItem="Fxf-eg-Rbz" secondAttribute="leading" id="YQp-JC-P0Z"/>
+                            <constraint firstItem="Qn4-9d-ceD" firstAttribute="leading" secondItem="iQH-fP-ctv" secondAttribute="leading" id="pNW-bq-iBY"/>
+                            <constraint firstItem="iQH-fP-ctv" firstAttribute="top" secondItem="xIL-tQ-D09" secondAttribute="bottom" constant="12" id="wbQ-rb-jbm"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="detailImageView" destination="xIL-tQ-D09" id="DQy-1e-T10"/>
+                        <outlet property="detailVideoNameLabel" destination="iQH-fP-ctv" id="MDM-1f-I1i"/>
+                        <outlet property="detailVideoSpecLabel" destination="Qn4-9d-ceD" id="JaX-YI-UzK"/>
+                        <outlet property="goToVideoListButton" destination="Y39-iI-GVl" id="UY3-4z-6gV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kYe-oI-XgQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3608.8000000000002" y="1483.7438423645322"/>
         </scene>
     </scenes>
     <resources>

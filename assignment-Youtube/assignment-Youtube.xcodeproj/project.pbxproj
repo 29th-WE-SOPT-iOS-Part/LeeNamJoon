@@ -17,6 +17,7 @@
 		1430B1602710A298005A0538 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1430B15F2710A298005A0538 /* LoginViewController.swift */; };
 		1430B1622710A2C5005A0538 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1430B1612710A2C5005A0538 /* SignUpViewController.swift */; };
 		1430B1642710A2D0005A0538 /* CompleteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1430B1632710A2D0005A0538 /* CompleteViewController.swift */; };
+		143AEB8C2775FDB30024789D /* HomeDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143AEB8B2775FDB30024789D /* HomeDetailVC.swift */; };
 		146C9E942710980D0065A609 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146C9E932710980D0065A609 /* AppDelegate.swift */; };
 		146C9E962710980D0065A609 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146C9E952710980D0065A609 /* SceneDelegate.swift */; };
 		146C9E982710980D0065A609 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146C9E972710980D0065A609 /* ViewController.swift */; };
@@ -47,6 +48,7 @@
 		1430B15F2710A298005A0538 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		1430B1612710A2C5005A0538 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		1430B1632710A2D0005A0538 /* CompleteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteViewController.swift; sourceTree = "<group>"; };
+		143AEB8B2775FDB30024789D /* HomeDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDetailVC.swift; sourceTree = "<group>"; };
 		146C9E902710980D0065A609 /* assignment-Youtube.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "assignment-Youtube.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		146C9E932710980D0065A609 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		146C9E952710980D0065A609 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 				14020A092722F24C00AF0375 /* SubscriptionVC.swift */,
 				146C9E972710980D0065A609 /* ViewController.swift */,
 				14020A012722F1FD00AF0375 /* YoutubeTabBarController.swift */,
+				143AEB8B2775FDB30024789D /* HomeDetailVC.swift */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -372,6 +375,7 @@
 				1430B1622710A2C5005A0538 /* SignUpViewController.swift in Sources */,
 				14020A062722F22800AF0375 /* ShortsVC.swift in Sources */,
 				1430B1642710A2D0005A0538 /* CompleteViewController.swift in Sources */,
+				143AEB8C2775FDB30024789D /* HomeDetailVC.swift in Sources */,
 				14EFE90D2741419900864A81 /* NetworkResult.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
